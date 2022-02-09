@@ -1,0 +1,64 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.cardbox {
+    display: flex;
+    width: 90vw;
+
+    &__card {
+        position: relative;
+        flex: 0.5;
+        height: 80vh;
+        margin: 1rem;
+        border-radius: 5rem;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: flex 700ms ease-in;
+    }
+
+    &--active {
+        flex: 5;
+
+        .cardbox__text {
+            opacity: 1;
+            transition: opacity 300ms ease-in 400ms;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 0 0 5rem 5rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-size: 2.4rem;
+        opacity: 0;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        & {
+            width: 100vw;
+
+            &__card {
+                &:nth-of-type(4),
+                &:nth-of-type(5) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
