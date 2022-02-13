@@ -1,0 +1,22 @@
+// All styles kept in here, not worth to be separated into components
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    color: #fff;
+    font-size: 3.5rem;
+    transform: translate(-50%, -50%);
+}
+
+.bg {
+    z-index: -1;
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    width: calc(100vw + 3rem);
+    height: calc(100vh + 3rem);
+    background: url('https://images.unsplash.com/photo-1644310885721-98c5c7f94ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80')
+        no-repeat center center/cover;
+    filter: blur(3px);
+}
