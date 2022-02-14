@@ -1,0 +1,43 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-items: center;
+    background-color: #d3dedc;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 2rem;
+    font-size: 3rem;
+    color: #222;
+    text-shadow: 0 2px 3px #555;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 30rem;
+    height: 15rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    background-color: #35589a;
+    color: #fff;
+    transform: translateX(400%);
+    transition: transform 400ms ease;
+
+    &:nth-of-type(even) {
+        transform: translateX(-400%);
+    }
+
+    &--show {
+        transform: translateX(0) !important;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
