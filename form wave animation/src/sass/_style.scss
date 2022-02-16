@@ -1,0 +1,108 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: steelblue;
+    color: #fff;
+}
+
+.container {
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    h1 {
+        margin-bottom: 5rem;
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    a {
+        color: lightblue;
+        text-decoration: none;
+    }
+}
+
+.form {
+    width: 30rem;
+
+    @media screen and (max-width: 400px) {
+        & {
+            width: 20rem;
+        }
+    }
+
+    &__control {
+        position: relative;
+        margin: 2rem 0 4rem;
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 1.5rem 0;
+            border: 0;
+            border-bottom: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            font-size: 1.5rem;
+
+            &:focus,
+            &:valid {
+                outline: none;
+                border-bottom-color: lightblue;
+            }
+
+            &:focus + label span,
+            &:valid + label span,
+            &:not(:placeholder-shown) + label span {
+                color: lightblue;
+                transform: translateY(-3rem);
+            }
+
+            &[type='email']:invalid {
+                color: #c72121;
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 1.5rem;
+            left: 0;
+        }
+    }
+
+    &__letter-span {
+        display: inline-block;
+        min-width: 0.5rem;
+        font-size: 1.5rem;
+        transition: transform 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-family: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:hover {
+        background-color: darken(lightblue, 10%);
+    }
+}
+
+.text {
+    margin-top: 3rem;
+    font-size: 1.25rem;
+}
