@@ -1,0 +1,59 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.soundboard {
+    &__nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            list-style: none;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            li {
+                cursor: pointer;
+            }
+        }
+
+        &--active {
+            font-weight: bold;
+        }
+    }
+
+    &__sounds {
+        display: flex;
+        gap: 1.75rem;
+
+        button {
+            padding: 1.25rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #398ab9;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            user-select: none;
+            cursor: pointer;
+
+            &:active {
+                box-shadow: 0 0 3px 0.5rem rgba(#438db8, 0.5);
+                transform: scale(0.95);
+            }
+
+            &:hover {
+                background-color: #438db8;
+            }
+        }
+    }
+}
