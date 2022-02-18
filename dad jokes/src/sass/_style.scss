@@ -1,0 +1,50 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #eee;
+}
+
+.container {
+    width: 80rem;
+    padding: 5rem 2rem;
+    background-color: #d8d2cb;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    h3 {
+        opacity: 0.5;
+        letter-spacing: 2px;
+    }
+}
+
+.joke {
+    max-width: 60rem;
+    margin: 5rem auto;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.btn {
+    padding: 1.4rem 4rem;
+    border: 0;
+    border-radius: 3px;
+    background-color: #398ab9;
+    color: #fff;
+    font-size: 1.6rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 250ms ease, background-color 250ms ease;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:hover {
+        background-color: #1c658c;
+    }
+}
