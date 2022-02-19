@@ -1,0 +1,50 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #e5e5e5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.keycodes {
+    &__info {
+        margin-bottom: 5rem;
+        color: #1b1a1a;
+        font-size: 5rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    &__codes {
+        display: flex;
+        width: 65rem;
+        gap: 3rem;
+    }
+
+    &__group {
+        display: flex;
+        flex: 1;
+        flex-flow: column nowrap;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 2rem;
+
+        small {
+            padding: 2rem 3rem;
+            background-color: #7b2cbf;
+            text-align: center;
+        }
+    }
+
+    &__value {
+        padding: 2rem 0;
+        background-color: #3c096c;
+        font-weight: 600;
+        text-align: center;
+    }
+}
