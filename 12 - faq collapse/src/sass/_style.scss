@@ -1,0 +1,81 @@
+// All styles kept in here, not worth to be separated into components
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #222;
+
+    h1 {
+        margin-bottom: 3.5rem;
+        font-size: 2.5rem;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.faq {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.5rem;
+    color: #fff;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem 1rem 2rem;
+    }
+
+    &__entry {
+        border-radius: 3px;
+        background-color: #b8405e;
+
+        &--active {
+            div {
+                display: block;
+            }
+
+            button div:first-of-type {
+                display: none;
+            }
+        }
+    }
+
+    &__close {
+        display: none;
+    }
+
+    &__title {
+        margin-right: 3rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    &__text {
+        display: none;
+        padding: 2rem 2rem;
+        background-color: #313552;
+        font-size: 1.25rem;
+    }
+
+    &__toggle {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #19282f;
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: #131d22;
+            cursor: pointer;
+        }
+
+        div {
+            width: 7rem;
+            padding: 0.75rem 2rem;
+            color: #fff;
+        }
+    }
+}
