@@ -1,0 +1,104 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #eafbff;
+	background-image: linear-gradient(
+		to bottom,
+		#efdad7 0%,
+		#efdad7 50%,
+		#e3bec6 50%,
+		#e3bec6 100%
+	);
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+	width: 8rem;
+	padding: 2rem;
+	border-radius: 3px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	transition: width 600ms linear;
+
+	&#{&}--active {
+		width: 35rem;
+
+		ul {
+			width: 100%;
+
+			li {
+				transform: rotateY(360deg);
+				opacity: 1;
+			}
+		}
+
+		.nav__line {
+			&-1 {
+				transform: rotate(-765deg) translateY(5.5px);
+			}
+
+			&-2 {
+				transform: rotate(765deg) translateY(-5.5px);
+			}
+		}
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		width: 0;
+		list-style: none;
+		transition: width 600ms linear;
+
+		li {
+			transform: rotateY(0deg);
+			opacity: 0;
+			transition: transform 600ms linear, opacity 600ms linear;
+		}
+
+		a {
+			position: relative;
+			color: #000;
+			font-size: 1.25rem;
+			text-decoration: none;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		height: 3rem;
+		width: 3rem;
+		border: 0;
+		background-color: #fff;
+		cursor: pointer;
+
+		&:focus,
+		&:hover {
+			div {
+				background-color: #1572a1;
+			}
+		}
+	}
+
+	&__line {
+		position: absolute;
+		top: 1rem;
+		left: 0.5rem;
+		height: 2px;
+		width: 2rem;
+		background-color: #9ad0ec;
+		transition: transform 600ms linear;
+
+		&-2 {
+			top: auto;
+			bottom: 1rem;
+		}
+	}
+}
