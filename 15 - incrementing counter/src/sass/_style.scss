@@ -1,0 +1,43 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #eee;
+}
+
+.counter-container {
+	display: flex;
+	gap: 4rem;
+
+	@media screen and (max-width: 768px) {
+		& {
+			flex-flow: column;
+		}
+	}
+}
+
+.counter {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	svg {
+		width: 8rem;
+		height: 8rem;
+
+		& > :not(rect) {
+			stroke: #ff6464;
+		}
+	}
+
+	&__number {
+		margin-top: 1rem;
+		font-size: 6rem;
+	}
+
+	span {
+		font-size: 1.35rem;
+	}
+}
