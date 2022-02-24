@@ -1,0 +1,88 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	margin-top: 2rem;
+	height: 100vh;
+	background-color: #dff6ff;
+}
+
+h1 {
+	margin-bottom: 2rem;
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+
+.water-counter {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	&__cups {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+	}
+
+	&__cup {
+		overflow: hidden;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		width: 4.25rem;
+		height: 9rem;
+		border: 3px solid #051367;
+		border-radius: 0 0 1rem 1rem;
+		background-color: #c7d7fc;
+		color: #051367;
+		font-size: 1.5rem;
+		text-align: center;
+		word-wrap: break-word;
+		cursor: pointer;
+		transition: all 300ms ease;
+
+		&--full {
+			background-color: #5d8bf4;
+			color: #fff;
+		}
+
+		&-big {
+			width: 14rem;
+			height: 28rem;
+			margin-top: 5rem;
+			border-radius: 0 0 4rem 4rem;
+		}
+	}
+
+	&__remaining {
+		display: flex;
+		justify-content: center;
+		flex-flow: column;
+		flex: 1;
+		transition: all 300ms ease;
+
+		span {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+	}
+
+	&__percentage {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		height: 0;
+		background-color: #5d8bf4;
+		font-size: 2.75rem;
+		font-weight: 600;
+		transition: all 300ms ease;
+	}
+
+	&__info {
+		margin: 3.5rem 0 2rem 0;
+		font-size: 1.4rem;
+	}
+}
