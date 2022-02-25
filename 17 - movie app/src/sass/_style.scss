@@ -1,0 +1,102 @@
+// All styles kept in here, not worth to be separated into components
+$rating-colors: (
+	'green': lightgreen,
+	'orange': orange,
+	red: red,
+);
+
+@each $color, $color-code in $rating-colors {
+	.#{$color} {
+		color: $color-code;
+	}
+}
+
+body {
+	background-color: #191919;
+}
+
+.main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 3rem;
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+	background-color: #b33030;
+
+	input {
+		padding: 0.5rem 1rem;
+		border: 2px solid #b8405e;
+		border-radius: 5rem;
+		background-color: transparent;
+		color: #fff;
+		font-size: 1.4rem;
+		font-family: inherit;
+
+		&::placeholder {
+			color: rgb(211, 205, 205);
+		}
+
+		&:focus {
+			outline: none;
+			background-color: #191919;
+		}
+	}
+}
+
+.movie {
+	overflow-y: hidden;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 30rem;
+	background-color: #b33030;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	font-size: 1.25rem;
+	line-height: 1.8;
+
+	&:hover &__overview {
+		transform: translateY(0);
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem 1rem 1rem;
+		color: #eee;
+		letter-spacing: 0.5px;
+	}
+
+	&__rating {
+		padding: 0.25rem 0.5rem;
+		border-radius: 3px;
+		background-color: #191919;
+		font-weight: 600;
+	}
+
+	&__overview {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-height: 100%;
+		padding: 2rem;
+		background-color: #fff;
+		color: #333;
+		transform: translateY(101%);
+		transition: transform 300ms ease-in;
+	}
+}
