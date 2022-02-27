@@ -1,0 +1,18 @@
+$color-primary: --color-primary;
+$color-secondary: --color-secondary;
+$color-clock-face: --color-clock-face;
+$color-needle: --color-needle;
+
+$theme-map-light: (
+	$color-primary: #000,
+	$color-secondary: #fff,
+	$color-clock-face: #111,
+	$color-needle: #f0f0f0,
+);
+
+$theme-map-dark: (
+	$color-primary: #fff,
+	$color-secondary: #333,
+	$color-clock-face: #ececec,
+	$color-needle: #333,
+);
