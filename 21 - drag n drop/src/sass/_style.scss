@@ -1,0 +1,41 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #398ab9;
+}
+
+.boxes {
+	display: flex;
+	gap: 2rem;
+
+	@media screen and (max-width: 768px) {
+		flex-flow: column nowrap;
+	}
+
+	&__box {
+		width: 15rem;
+		height: 15rem;
+		border: 3px solid #000;
+		background-color: #fff;
+	}
+
+	&__fill {
+		width: 14.5rem;
+		height: 14.5rem;
+		background-image: url('https://source.unsplash.com/random/150x150');
+		cursor: pointer;
+	}
+
+	&__hold {
+		border: 5px solid #ccc;
+	}
+
+	&__hovered {
+		border-color: #fff;
+		border-style: dashed;
+		background-color: #333;
+	}
+}
