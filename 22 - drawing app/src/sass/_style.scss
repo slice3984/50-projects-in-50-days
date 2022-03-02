@@ -1,0 +1,39 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #f5f5f5;
+}
+
+.drawing-app {
+	&__canvas {
+		border: 2px solid steelblue;
+	}
+
+	&__toolbox {
+		display: flex;
+		padding: 1rem;
+		border: 1px solid slateblue;
+		background-color: steelblue;
+
+		& > * {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			height: 5rem;
+			width: 5rem;
+			margin: 0.25rem;
+			padding: 0.25rem;
+			border: none;
+			background-color: #fff;
+			font-size: 2rem;
+			cursor: pointer;
+		}
+
+		& > button:last-of-type {
+			margin-left: auto;
+		}
+	}
+}
