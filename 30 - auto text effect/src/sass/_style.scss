@@ -1,0 +1,16 @@
+// All styles kept in here, not worth to be separated into components
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #191a19;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.auto-text {
+	color: #357c3c;
+	font-size: 5rem;
+}
