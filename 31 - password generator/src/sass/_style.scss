@@ -1,0 +1,67 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	background-color: #fdeff4;
+}
+
+h2 {
+	margin-bottom: 2.5rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.btn {
+	padding: 0.75rem 0.5rem;
+	border: none;
+	background-color: #e45826;
+	color: #fff;
+	font-family: inherit;
+	cursor: pointer;
+	transition: background 200ms ease-in;
+
+	&:hover {
+		background-color: #f34709;
+	}
+
+	&--large {
+		width: 100%;
+	}
+}
+
+.pwd-generator {
+	width: 35rem;
+	padding: 2rem;
+	background-color: #22211d;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	color: #e45826;
+
+	&__result {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem 0.5rem;
+		background-color: #000;
+
+		span {
+			font-size: 1.4rem;
+			letter-spacing: 0.4px;
+		}
+	}
+
+	&__settings {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 1rem;
+		margin: 2rem 0;
+		font-size: 1.25rem;
+	}
+
+	&__group {
+		display: flex;
+		justify-content: space-between;
+	}
+}
