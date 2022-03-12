@@ -1,0 +1,63 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	height: 100vh;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 2rem;
+}
+
+.checkbox {
+	position: relative;
+	display: flex;
+	align-content: center;
+	width: 5.25rem;
+	height: 2.75rem;
+	border-radius: 100rem;
+	background-color: #a8a8a8;
+	appearance: none;
+	cursor: pointer;
+
+	&:checked {
+		background-color: #019267;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 2px;
+		top: 50%;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 100%;
+		background-color: #fff;
+		transition: all 250ms ease;
+		transform: translateY(-50%);
+	}
+
+	&:checked::before {
+		left: 100%;
+		transform: translateY(-50%) translateX(calc(-100% - 2px));
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+
+		label {
+			font-size: 1.5rem;
+		}
+	}
+}
