@@ -1,0 +1,135 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	// display: grid;
+	// place-content: center;
+	height: 100vh;
+}
+
+h4 {
+	margin: 5px;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.counter,
+.final {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.counter {
+	text-align: center;
+
+	&.hide {
+		transform: translate(-50%, -50%) scale(0);
+		animation: hide 200ms ease-out;
+	}
+
+	&__nums {
+		position: relative;
+		overflow: hidden;
+		width: 25rem;
+		height: 5rem;
+		color: #3498db;
+		font-size: 5rem;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform-origin: bottom center;
+			transform: translate(-50%, -50%) rotate(120deg);
+		}
+	}
+
+	& &--in {
+		transform: translate(-50%, -50%) rotate(0deg);
+		animation: goIn 500ms ease-in-out;
+	}
+
+	& &--out {
+		animation: goOut 500ms ease-in-out;
+	}
+}
+
+.final {
+	text-align: center;
+	transform: translate(-50%, -50%) scale(0);
+
+	h1 {
+		margin-bottom: 2rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	button {
+		padding: 1rem 2rem;
+		border: none;
+		background-color: #3498db;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	&.show {
+		transform: translate(-50%, -50%) scale(1);
+		animation: show 200ms ease-out;
+	}
+}
+
+@keyframes hide {
+	from {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	to {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes show {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	30% {
+		transform: translate(-50%, -50%) scale(1.4);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+@keyframes goIn {
+	0% {
+		transform: translate(-50%, -50%) rotate(120deg);
+	}
+
+	30% {
+		transform: translate(-50%, -50%) rotate(-20deg);
+	}
+
+	60% {
+		transform: translate(-50%, -50%) rotate(10deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}
+
+@keyframes goOut {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	60% {
+		transform: translate(-50%, -50%) rotate(20deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(-120deg);
+	}
+}
