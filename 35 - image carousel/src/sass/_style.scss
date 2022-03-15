@@ -1,0 +1,45 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+.carousel {
+	overflow: hidden;
+	width: 50rem;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+	&__imgs {
+		display: flex;
+		transform: translateX(0);
+		transition: transform 500ms ease-in-out;
+
+		img {
+			width: 50rem;
+			height: 50rem;
+			object-fit: cover;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+
+		button {
+			flex: 1;
+			padding: 0.75rem;
+			border: none;
+			background-color: rebeccapurple;
+			color: #fff;
+			font-size: 1.5rem;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				opacity: 0.9;
+			}
+		}
+	}
+}
