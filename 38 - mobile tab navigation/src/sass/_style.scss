@@ -1,0 +1,71 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	background-color: rgba(155, 89, 182, 0.7);
+}
+
+.phone {
+	position: relative;
+	overflow: hidden;
+	width: 34rem;
+	height: 60rem;
+	border: 3px solid #eee;
+	border-radius: 1.5rem;
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 6rem);
+		opacity: 0;
+		object-fit: cover;
+		transition: opacity 400ms ease;
+	}
+
+	&--show {
+		opacity: 1;
+	}
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin-top: -5px;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 6rem;
+		background-color: #fff;
+		list-style: none;
+
+		li {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			gap: 5px;
+			padding: 1rem;
+			color: #777;
+			cursor: pointer;
+
+			&:hover,
+			&.active {
+				color: #8e44ad;
+			}
+
+			i {
+				font-size: 2.25rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
