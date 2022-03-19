@@ -1,0 +1,80 @@
+// All styles kept in here, not worth to be separated into components
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Share+Tech+Mono&display=swap');
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.background {
+	z-index: -1;
+	position: absolute;
+	top: -2rem;
+	bottom: -2rem;
+	left: -2rem;
+	right: -2rem;
+	background: url('https://source.unsplash.com/random/1920×1080') no-repeat center
+		center/cover;
+	filter: blur(20px);
+}
+
+.password-form {
+	padding: 3rem;
+	background-color: #fff;
+	border-radius: 5px;
+
+	h1 {
+		margin-bottom: 0.5rem;
+		font-size: 2.75rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+	}
+
+	p {
+		margin-bottom: 2.25rem;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	&__group {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 0.5rem;
+
+		&:not(:last-of-type) {
+			margin-bottom: 2rem;
+		}
+
+		label {
+			margin-bottom: 0.5rem;
+			font-size: 1.45rem;
+		}
+
+		input {
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			font-size: 1.6rem;
+
+			&:focus {
+				border: 1px solid #00e;
+			}
+		}
+	}
+
+	button {
+		width: 100%;
+		margin-top: 3rem;
+		padding: 1rem 0;
+		border: none;
+		background-color: #000;
+		color: #fff;
+		font-size: 1.65rem;
+		text-align: center;
+	}
+}
