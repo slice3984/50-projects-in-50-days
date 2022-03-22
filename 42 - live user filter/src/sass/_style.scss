@@ -1,0 +1,91 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+.user-search {
+	display: flex;
+	flex-flow: column;
+	overflow: hidden;
+	width: 25rem;
+	height: 50rem;
+	border-radius: 7px;
+
+	&__header {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 2.25rem 2rem;
+		border-top-left-radius: inherit;
+		border-top-right-radius: inherit;
+		background-color: #019267;
+		color: #fff;
+
+		h4 {
+			font-size: 1.4rem;
+		}
+
+		small {
+			font-size: 1.1rem;
+			line-height: 1.7;
+		}
+
+		input {
+			margin-top: 1.25rem;
+			padding: 0.75rem;
+			border: none;
+			border-radius: 100px;
+			background-color: #1a6952;
+			color: #fff;
+			font-family: inherit;
+			font-size: 1.2rem;
+
+			&::placeholder {
+				color: #aaa;
+			}
+		}
+	}
+
+	&__list {
+		overflow-y: auto;
+		flex-flow: column nowrap;
+		border: 1px solid #eee;
+		border-top: none;
+		list-style: none;
+
+		li {
+			display: flex;
+			gap: 1rem;
+			padding: 1.25rem 1rem;
+
+			&:not(:last-of-type) {
+				border-bottom: 1px solid #ccc;
+			}
+
+			img {
+				width: 5rem;
+				height: 5rem;
+				border-radius: 50%;
+			}
+
+			div {
+				display: flex;
+				flex-flow: column;
+				justify-content: space-evenly;
+
+				h4 {
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+
+	&__list &--hide {
+		display: none;
+	}
+}
