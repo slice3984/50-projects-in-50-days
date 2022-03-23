@@ -1,0 +1,81 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	background-color: #fef9f2;
+}
+
+.panel {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 40rem;
+	padding: 3rem;
+	border-radius: 4px;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	// font-size: ;
+
+	strong {
+		line-height: 1.6;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	&__ratings {
+		display: flex;
+		margin: 2rem 5px;
+	}
+
+	&__rating {
+		flex: 1;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: 1rem;
+		padding: 2rem;
+
+		&:hover,
+		&#{&}--active {
+			border-radius: 4px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+
+			small {
+				color: #111;
+			}
+		}
+
+		i {
+			font-size: 4rem;
+		}
+
+		small {
+			color: #555;
+			font-size: 1.15rem;
+		}
+	}
+}
+
+.btn {
+	padding: 1.2rem 3rem;
+	border: 0;
+	border-radius: 4px;
+	background-color: #302d2b;
+	color: #fff;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+.heart {
+	&::before {
+		content: '❤';
+		color: #d31717;
+		font-size: 5rem;
+	}
+}

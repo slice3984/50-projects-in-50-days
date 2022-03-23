@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day #43 - Feedback UI Design</title>
+	</head>
+	<body>
+		<div class="panel" id="panel">
+			<strong>How satisfied are you with our customer support performance?</strong>
+			<div class="panel__ratings">
+				<div class="panel__rating">
+					<i>😢</i>
+					<small>Unhappy</small>
+				</div>
+				<div class="panel__rating">
+					<i>😐</i>
+					<small>Neutral</small>
+				</div>
+				<div class="panel__rating panel__rating--active">
+					<i>😃</i>
+					<small>Satisfied</small>
+				</div>
+			</div>
+			<button class="btn" id="send">Send Review</button>
+		</div>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
