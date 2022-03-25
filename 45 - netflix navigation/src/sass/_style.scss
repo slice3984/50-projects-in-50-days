@@ -1,0 +1,112 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	background-color: #fafafa;
+}
+
+.logo {
+	width: 15rem;
+}
+
+.text {
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	transform: translateX(-100%);
+	transition: transform 300ms ease-in-out;
+
+	&--visible {
+		transform: translateX(0);
+
+		&.nav--black {
+			transition-delay: 0ms;
+		}
+
+		&.nav--red {
+			transition-delay: 200ms;
+		}
+
+		&.nav--white {
+			transition-delay: 400ms;
+		}
+	}
+
+	&--black {
+		max-width: 48rem;
+		min-width: 32rem;
+		width: 60%;
+		background-color: #000;
+		transition-delay: 400ms;
+	}
+
+	&--red {
+		width: 95%;
+		background-color: #f00;
+		transition-delay: 200ms;
+	}
+
+	&--white {
+		position: relative;
+		width: 95%;
+		padding: 4rem;
+		background-color: #fff;
+		transition-delay: 0ms;
+	}
+
+	&__btn {
+		width: 3rem;
+		height: 3rem;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&-open {
+			position: fixed;
+			top: 1rem;
+			left: 1rem;
+		}
+
+		&-close {
+			position: absolute;
+			top: 4rem;
+			right: 4rem;
+			opacity: 0.3;
+		}
+	}
+
+	&__list {
+		margin-top: 2rem;
+	}
+
+	&__list,
+	&__list ul {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		list-style-type: none;
+
+		a {
+			color: #000;
+			font-size: 1.4rem;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+
+	&__list ul {
+		margin-left: 2.5rem;
+	}
+}
