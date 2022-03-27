@@ -1,0 +1,79 @@
+// All styles kept in here, not worth to be separated into components
+body {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	background-color: #f4f4f4;
+}
+
+.testimonials {
+	position: relative;
+	max-width: 76.8rem;
+	margin: 2rem auto;
+	padding: 5rem 8rem;
+	border-radius: 1.5rem;
+	background-color: #476ce4;
+	color: #fff;
+
+	@media screen and (max-width: 768px) {
+		padding: 2rem 3rem;
+	}
+
+	&__quote {
+		position: absolute;
+		top: 4rem;
+		color: rgba(255, 255, 255, 0.3);
+		font-size: 4rem;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+
+		&:first-of-type {
+			left: 2rem;
+		}
+
+		&:last-of-type {
+			right: 2rem;
+		}
+	}
+
+	&__text {
+		line-height: 2;
+		font-size: 1.25rem;
+		text-align: justify;
+	}
+
+	&__user {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
+
+		img {
+			width: 7.5rem;
+			height: 7.5rem;
+			margin-right: 1rem;
+			border-radius: 50%;
+		}
+
+		h4 {
+			margin-bottom: 0.75rem;
+		}
+	}
+
+	&__progress {
+		width: 100%;
+		height: 4px;
+		margin-bottom: 1rem;
+		background-color: #fff;
+		transform-origin: left;
+		animation: grow 10s linear infinite;
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scaleX(0);
+	}
+}
