@@ -1,0 +1,142 @@
+// All styles kept in here, not worth to be separated into components
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+	overflow: hidden;
+	background-color: #516dff;
+	color: #fff;
+	font-family: 'Press Start 2P', sans-serif;
+	text-align: center;
+}
+
+.screen {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	transition: margin 0.5s ease-out;
+
+	&--up {
+		margin-top: -100vh;
+	}
+}
+
+.insects-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 1rem;
+	list-style-type: none;
+}
+
+.choose-insect-btn {
+	width: 15rem;
+	height: 15rem;
+	border: 2px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	font-family: inherit;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #fff;
+		color: #516dff;
+	}
+
+	&:active {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	img {
+		width: 10rem;
+		height: 10rem;
+		object-fit: contain;
+	}
+}
+
+a {
+	color: #fff;
+}
+
+h1 {
+	margin: 3rem 0;
+	line-height: 1.4;
+}
+
+.btn {
+	padding: 1.5rem 2rem;
+	border: none;
+	background-color: #fff;
+	color: #516dff;
+	font-family: inherit;
+	font-size: 2rem;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.game-container {
+	position: relative;
+
+	h3 {
+		position: absolute;
+		top: 2rem;
+	}
+
+	// Time
+	h3:nth-of-type(1) {
+		left: 2rem;
+	}
+
+	// Score
+	h3:nth-of-type(2) {
+		right: 2rem;
+	}
+
+	// Message
+	h5 {
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 100%;
+		padding: 2rem;
+		opacity: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		font-size: 1.75rem;
+		line-height: 1.7;
+		text-align: center;
+		transform: translate(-50%, -150%);
+		transition: transform 0.4s ease-in;
+
+		&.visible {
+			opacity: 1;
+			transform: translate(-50%, 150%);
+		}
+	}
+}
+
+.insect {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	height: 10rem;
+	transform: translate(-50%, -50%) scale(1);
+	cursor: pointer;
+	transition: transform 0.3s ease-out;
+
+	&--caught {
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	img {
+		width: 10rem;
+		height: 10rem;
+	}
+}
